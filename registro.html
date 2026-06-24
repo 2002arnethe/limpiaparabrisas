@@ -26,13 +26,34 @@
           <input type="password" id="password" placeholder="Mínimo 6 caracteres" required/>
         </div>
         <div class="form-group">
-          <label for="edad">Edad</label>
-          <input type="number" id="edad" placeholder="Tu edad" min="10" max="99" required/>
+          <label for="rol">Tipo de cuenta</label>
+          <select id="rol" required>
+            <option value="">Selecciona tu rol</option>
+            <option value="limpiaparabrisas">Limpiaparabrisas</option>
+            <option value="ong">ONG / Municipio</option>
+          </select>
         </div>
-        <div class="form-group">
-          <label for="zona">Zona donde trabajas</label>
-          <input type="text" id="zona" placeholder="Ej: Miraflores, San Isidro..." required/>
+
+        <!-- Campos solo para limpiaparabrisas -->
+        <div id="campos-limpia" class="hidden">
+          <div class="form-group">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" placeholder="Tu edad" min="10" max="99"/>
+          </div>
+          <div class="form-group">
+            <label for="zona">Zona donde trabajas</label>
+            <input type="text" id="zona" placeholder="Ej: Miraflores, San Isidro..."/>
+          </div>
         </div>
+
+        <!-- Campos solo para ONG -->
+        <div id="campos-ong" class="hidden">
+          <div class="form-group">
+            <label for="organizacion">Nombre de la organización</label>
+            <input type="text" id="organizacion" placeholder="Nombre de tu ONG o municipio"/>
+          </div>
+        </div>
+
         <div id="error-msg" class="error-msg hidden"></div>
         <div id="success-msg" class="success-msg hidden"></div>
         <button type="submit" class="btn-primary">Registrarse</button>
@@ -41,6 +62,8 @@
       <p class="link-text">¿Ya tienes cuenta? <a href="index.html">Inicia sesión</a></p>
     </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/supabase.js"></script>
   <script src="js/registro.js"></script>
 </body>

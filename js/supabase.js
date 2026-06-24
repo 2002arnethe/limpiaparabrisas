@@ -7,5 +7,5 @@
 const SUPABASE_URL = 'https://srlodkxnovyblqtiekkz.supabase.co/rest/v1/';
 const SUPABASE_KEY = 'sb_publishable_dmT8o54kfutjkPhQcGXQjw_d1Jf_eek';
 
-const { createClient } = supabase;
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
+
