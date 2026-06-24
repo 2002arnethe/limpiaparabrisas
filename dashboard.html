@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Panel — Plataforma Limpiaparabrisas</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <span class="nav-title">Plataforma de Apoyo</span>
+    <div class="nav-links">
+      <a href="dashboard.html" class="active">Inicio</a>
+      <a href="oportunidades.html">Oportunidades</a>
+      <a href="historial.html">Mi historial</a>
+      <a href="perfil.html">Mi perfil</a>
+      <button id="logout-btn" class="btn-logout">Cerrar sesión</button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="welcome-card">
+      <h2>Bienvenido/a, <span id="nombre-usuario">usuario</span></h2>
+      <p>Aquí puedes ver tus oportunidades de apoyo y tu historial de atenciones.</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="info-card" onclick="location.href='oportunidades.html'">
+        <div class="card-icon">🤝</div>
+        <h3>Oportunidades disponibles</h3>
+        <p id="total-oportunidades">Cargando...</p>
+      </div>
+      <div class="info-card" onclick="location.href='historial.html'">
+        <div class="card-icon">📋</div>
+        <h3>Mis atenciones</h3>
+        <p id="total-atenciones">Cargando...</p>
+      </div>
+      <div class="info-card" onclick="location.href='perfil.html'">
+        <div class="card-icon">👤</div>
+        <h3>Mi perfil</h3>
+        <p>Ver y actualizar mis datos</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/supabase.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

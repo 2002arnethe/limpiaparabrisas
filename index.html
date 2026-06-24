@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plataforma Limpiaparabrisas</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <h1>Plataforma de Apoyo</h1>
+      <p class="subtitle">Sistema de registro y vinculación para limpiaparabrisas</p>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" placeholder="correo@ejemplo.com" required/>
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" placeholder="••••••••" required/>
+        </div>
+        <div id="error-msg" class="error-msg hidden"></div>
+        <button type="submit" class="btn-primary">Iniciar sesión</button>
+      </form>
+
+      <p class="link-text">¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+    </div>
+  </div>
+  <script src="js/supabase.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

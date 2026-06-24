@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Perfil — Plataforma Limpiaparabrisas</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <span class="nav-title">Plataforma de Apoyo</span>
+    <div class="nav-links">
+      <a href="dashboard.html">Inicio</a>
+      <a href="oportunidades.html">Oportunidades</a>
+      <a href="historial.html">Mi historial</a>
+      <a href="perfil.html" class="active">Mi perfil</a>
+      <button id="logout-btn" class="btn-logout">Cerrar sesión</button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <h2>Mi perfil</h2>
+    <div class="form-card">
+      <form id="perfil-form">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" required/>
+        </div>
+        <div class="form-group">
+          <label for="edad">Edad</label>
+          <input type="number" id="edad" min="10" max="99" required/>
+        </div>
+        <div class="form-group">
+          <label for="zona">Zona donde trabajas</label>
+          <input type="text" id="zona" required/>
+        </div>
+        <div id="error-msg" class="error-msg hidden"></div>
+        <div id="success-msg" class="success-msg hidden"></div>
+        <button type="submit" class="btn-primary">Guardar cambios</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/supabase.js"></script>
+  <script src="js/perfil.js"></script>
+</body>
+</html>

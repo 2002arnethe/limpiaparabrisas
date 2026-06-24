@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Historial — Plataforma Limpiaparabrisas</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <span class="nav-title">Plataforma de Apoyo</span>
+    <div class="nav-links">
+      <a href="dashboard.html">Inicio</a>
+      <a href="oportunidades.html">Oportunidades</a>
+      <a href="historial.html" class="active">Mi historial</a>
+      <a href="perfil.html">Mi perfil</a>
+      <button id="logout-btn" class="btn-logout">Cerrar sesión</button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <h2>Mi historial de atenciones</h2>
+    <div id="lista-historial" class="lista-cards">
+      <p class="loading-text">Cargando historial...</p>
+    </div>
+  </main>
+
+  <script src="js/supabase.js"></script>
+  <script src="js/historial.js"></script>
+</body>
+</html>
